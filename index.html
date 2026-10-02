@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Threnos Games</title>
+<meta name="description" content="Threnos Games, tek kişilik bir oyun stüdyosu. Issız Ada ve yeni bir aksiyon-RPG üzerine çalışıyor. Geliştirme günlüğü YouTube'da.">
+<meta name="theme-color" content="#2b2638">
+<link rel="canonical" href="https://threnosgames.github.io/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Threnos Games">
+<meta property="og:title" content="Threnos Games">
+<meta property="og:description" content="Tek kişilik oyun stüdyosu. Issız Ada ve yeni bir aksiyon-RPG üzerine çalışıyor. Geliştirme günlüğü YouTube'da.">
+<meta property="og:url" content="https://threnosgames.github.io/">
+<meta property="og:image" content="https://threnosgames.github.io/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/img/hero.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" href="assets/fonts/caudex-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Threnos Games · yapı: gündüzden geceye inen tek sayfa (gökyüzü → alacakaranlık → gece) */
+@font-face{font-family:"Caudex";font-weight:400;font-style:normal;font-display:swap;
+  src:url(assets/fonts/caudex-latin-ext-400-normal.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Caudex";font-weight:400;font-style:normal;font-display:swap;
+  src:url(assets/fonts/caudex-latin-400-normal.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Hanken Grotesk";font-weight:100 900;font-style:normal;font-display:swap;
+  src:url(assets/fonts/hanken-grotesk-latin-ext-wght-normal.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Hanken Grotesk";font-weight:100 900;font-style:normal;font-display:swap;
+  src:url(assets/fonts/hanken-grotesk-latin-wght-normal.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  /* renkler oyunun kendi karelerinden */
+  --ink:oklch(0.24 0.045 300);          /* gökyüzü üstündeki koyu yazı */
+  --veil:oklch(0.97 0.02 300);          /* açık gökyüzü perdesi */
+  --dusk:oklch(0.27 0.04 305);          /* alacakaranlık */
+  --night:oklch(0.17 0.03 275);         /* gece */
+  --bone:oklch(0.95 0.015 75);          /* koyu üstünde yazı */
+  --bone-soft:oklch(0.86 0.035 70);      /* ikincil yazı, kumdan tonlu */
+  --sand:oklch(0.84 0.075 62);          /* Issız Ada: gün batımı kumu */
+  --steel:oklch(0.82 0.055 250);        /* yeni oyun: soğuk çelik */
+  --rule:oklch(0.95 0.015 75 / .18);
+  --serif:"Caudex",Georgia,"Times New Roman",serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;--s10:128px;
+  --gutter:clamp(20px,5vw,56px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scrollbar-color:var(--bone-soft) var(--night);color-scheme:dark}
+body{margin:0;background:var(--night);color:var(--bone);font-family:var(--sans);font-size:1.125rem;line-height:1.62}
+::selection{background:var(--sand);color:var(--night)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.26em}
+a:hover{text-decoration-thickness:2px}
+a:active{opacity:.75}
+:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}
+.wrap{width:min(1180px,100% - 2*var(--gutter));margin-inline:auto}
+h1,h2{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance;overflow-wrap:anywhere}
+
+/* ---- gökyüzü ---- */
+.sky{position:relative;height:clamp(600px,100svh,1100px);color:var(--ink);overflow:hidden;background:var(--veil)}
+.sky>img,.sky>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 100%}
+.sky>video{opacity:0;transition:opacity 1.2s ease-out}
+.sky>video.on{opacity:1}
+.sky::before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg,oklch(0.97 0.02 300 / .62) 0%,oklch(0.97 0.02 300 / .28) 38%,transparent 62%)}
+.sky::after{content:"";position:absolute;left:0;right:0;bottom:0;height:30%;z-index:1;
+  background:linear-gradient(to bottom,transparent 0%,oklch(0.27 0.04 305 / .18) 35%,oklch(0.27 0.04 305 / .62) 70%,var(--dusk) 100%)}
+.top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding-top:var(--s5)}
+.mark{display:flex;align-items:center;gap:var(--s3);font-weight:650;text-decoration:none}
+.mark img{width:36px;height:36px;border-radius:50%}
+.lang{font:inherit;font-weight:650;line-height:1;color:var(--ink);background:oklch(0.97 0.02 300 / .55);border:1px solid var(--ink);border-radius:999px;padding:var(--s2) var(--s4);cursor:pointer}
+.lang:hover{background:var(--ink);color:var(--veil)}
+.lang:active{transform:translateY(1px)}
+.sky-body{position:relative;z-index:2;padding-top:clamp(48px,13svh,150px)}
+h1{font-size:clamp(3.5rem,12.5vw,9.25rem);line-height:.92;letter-spacing:-.03em}
+.lede{max-width:26ch;margin:var(--s6) 0 0;font-size:clamp(1.25rem,2.6vw,1.7rem);line-height:1.42;font-weight:500}
+.cta{display:inline-block;margin-top:var(--s6);padding:var(--s4) var(--s6);background:var(--ink);color:var(--veil);font-weight:700;font-size:1.0625rem;text-decoration:none;border-radius:999px;transition:background-color .25s ease-out,transform .25s ease-out}
+.cta:hover{background:var(--night);transform:translateY(-2px)}
+.cta:active{transform:translateY(1px);opacity:1}
+
+/* ---- alacakaranlıktan geceye ---- */
+main{background:radial-gradient(90% 520px at 22% 0,oklch(0.84 0.075 62 / .13),transparent 70%),linear-gradient(to bottom,var(--dusk) 0,var(--night) 1900px)}
+.game{padding-block:var(--s9) var(--s8)}
+.intro{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s6) var(--s9);align-items:start}
+.ada .intro h2{grid-column:1/-1;margin-bottom:var(--s5)}
+.game h2{font-size:clamp(3.4rem,13vw,10.5rem);line-height:.9;letter-spacing:-.03em}
+.ada h2{color:var(--sand)}
+.fen h2{color:var(--steel)}
+.alias{margin:var(--s4) 0 0;font-family:var(--sans);font-size:1rem;letter-spacing:0;color:var(--bone-soft)}
+.intro p{margin:0 0 var(--s4);max-width:50ch}
+.intro .why{font-family:var(--serif);font-size:clamp(1.7rem,3.9vw,3rem);line-height:1.3;color:var(--bone);max-width:20ch;margin:0}
+.status{color:var(--bone-soft)}
+.intro a{font-weight:650;color:var(--sand)}
+.fen .intro a{color:var(--steel)}
+
+.shots{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s9) var(--s6);margin:var(--s10) 0 0;padding:0;align-items:end}
+.shots figure{margin:0}
+.shots figure:nth-child(1){grid-column:1/-1}
+.shots figure:nth-child(1) img{aspect-ratio:21/9;object-fit:cover}
+.shots figure:nth-child(2),.shots figure:nth-child(5){grid-column:span 5}
+.shots figure:nth-child(3),.shots figure:nth-child(4){grid-column:span 7}
+.shots figure:nth-child(2){padding-bottom:var(--s9)}
+.shots figure:nth-child(5){padding-top:var(--s9);align-self:start}
+.shots img{width:100%;border-radius:6px;background:var(--night);box-shadow:0 30px 60px -30px oklch(0.1 0.03 275 / .9)}
+.shots figcaption{margin-top:var(--s4);font-family:var(--serif);font-size:clamp(1.2rem,2.1vw,1.6rem);line-height:1.35;color:var(--bone);max-width:30ch}
+
+.fen{position:relative;overflow:hidden;padding-block:clamp(120px,22svh,240px);background:radial-gradient(70% 60% at 78% 55%,oklch(0.82 0.055 250 / .13),transparent 70%)}
+.fen .intro{grid-template-columns:minmax(0,1fr)}
+.fen .lead{font-family:var(--serif);font-size:clamp(1.7rem,3.9vw,3rem);line-height:1.3;max-width:24ch;color:var(--bone);margin:var(--s6) 0 var(--s6)}
+.fen .cols{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s5) var(--s9)}
+.fen .intro{align-items:start;position:relative;z-index:1}
+#souls{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+/* gündüzden geceye: kaydırdıkça akan zaman */
+.lapse{position:relative;height:260vh;margin-top:var(--s8)}
+.lapse-pin{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--night)}
+.lapse video,.glow video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cap{position:absolute;left:0;right:0;bottom:0;z-index:1;padding-block:var(--s9) var(--s7);
+  background:linear-gradient(to top,oklch(0.17 0.03 275 / .82),transparent)}
+.cap p{margin:0;font-family:var(--serif);font-size:clamp(1.9rem,5.4vw,4.25rem);line-height:1.18;letter-spacing:-.012em;max-width:18ch;text-wrap:balance}
+.glow{position:relative;height:clamp(420px,82svh,820px);overflow:hidden;background:var(--night);margin-top:var(--s9)}
+.ada{padding-bottom:0}
+
+.follow{padding-block:var(--s10) var(--s9);border-top:1px solid var(--rule)}
+.follow h2{font-size:clamp(1.2rem,2.1vw,1.6rem);line-height:1.3;color:var(--bone-soft)}
+.follow ul{list-style:none;margin:var(--s5) 0 0;padding:0}
+.follow li{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s1) var(--s9);padding:var(--s5) 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.follow li:first-child{border-top:1px solid var(--rule)}
+.follow li a{font-family:var(--serif);font-size:clamp(2.4rem,7.5vw,5.5rem);line-height:1.05;letter-spacing:-.02em;text-decoration:none;justify-self:start;transition:color .25s ease-out,transform .35s cubic-bezier(.16,1,.3,1)}
+.follow li a:hover{color:var(--sand);transform:translateX(12px)}
+.follow li span{color:var(--bone-soft)}
+footer{padding:var(--s6) 0 var(--s8);color:var(--bone-soft);font-size:1rem}
+footer .wrap{display:flex;align-items:center;gap:var(--s3)}
+footer img{width:28px;height:28px;border-radius:50%}
+
+@media (prefers-reduced-motion:reduce){.lapse{height:auto}.lapse-pin{position:relative;height:clamp(360px,70svh,720px)}}
+@media (max-width:760px){
+  .lapse{height:220vh}
+  .intro,.follow li,.fen .cols{grid-template-columns:minmax(0,1fr)}
+  .shots figure:nth-child(2),.shots figure:nth-child(5){padding:0}
+  .shots figure:nth-child(1) img{aspect-ratio:16/9}
+  .sky>img,.sky>video{object-position:55% 100%}
+  .shots{grid-template-columns:minmax(0,1fr);gap:var(--s6)}
+  .shots figure:nth-child(n){grid-column:auto}
+  .game{padding-block:var(--s8) var(--s7)}
+  .sky::before{background:linear-gradient(to bottom,oklch(0.97 0.02 300 / .8) 0%,oklch(0.97 0.02 300 / .62) 38%,transparent 66%)}
+}
+/* hareket: yalnız 'hareketi azalt' kapalıyken */
+@media (prefers-reduced-motion:no-preference){
+  h1{animation:rise 1.4s cubic-bezier(.16,1,.3,1) both}
+  .lede,.cta{animation:rise 1.4s .18s cubic-bezier(.16,1,.3,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(22px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+  @supports (animation-timeline:view()){
+    .shots img{animation:unveil linear both;animation-timeline:view();animation-range:entry 0% cover 34%}
+    .shots figure:nth-child(even) img{animation-name:unveil-r}
+    @keyframes unveil{from{clip-path:inset(0 100% 0 0);transform:scale(1.08)}to{clip-path:inset(0);transform:none}}
+    @keyframes unveil-r{from{clip-path:inset(0 0 0 100%);transform:scale(1.08)}to{clip-path:inset(0);transform:none}}
+    .shots figcaption{animation:cap-in linear both;animation-timeline:view();animation-range:entry 20% cover 30%}
+    @keyframes cap-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    .game h2{animation:name-in linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+    @keyframes name-in{from{opacity:.12;letter-spacing:.06em}to{opacity:1;letter-spacing:-.03em}}
+  }
+  .sky>img{animation:settle 2.4s cubic-bezier(.16,1,.3,1) both}
+  @keyframes settle{from{transform:scale(1.045);filter:brightness(1.12)}to{transform:none;filter:none}}
+}
+</style>
+</head>
+<body>
+
+<header class="sky">
+  <img src="assets/img/hero.webp" width="1920" height="1080" alt="Issız Ada'dan bir kare: gün batımında ufuktaki ada ve kuş sürüsü" data-alt-tr="Issız Ada'dan bir kare: gün batımında ufuktaki ada ve kuş sürüsü" data-alt-en="A frame from Issız Ada: an island on the horizon at sunset, with a flock of birds" fetchpriority="high" decoding="async">
+  <video id="heroVid" data-src="assets/video/hero" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+  <div class="wrap top">
+    <a class="mark" href="#top"><img src="assets/favicon.png" alt="" width="36" height="36"><span>Threnos Games</span></a>
+    <button class="lang" id="lang" type="button" lang="en">English</button>
+  </div>
+  <div class="wrap sky-body" id="top">
+    <h1>Threnos Games</h1>
+    <p class="lede" data-tr="Müzisyen bir geliştiricinin tek başına yaptığı oyunlar." data-en="Games made by one developer, who is also a musician.">Müzisyen bir geliştiricinin tek başına yaptığı oyunlar.</p>
+    <a class="cta" href="https://www.youtube.com/@threnosgames" data-tr="Geliştirme günlüğünü izle" data-en="Watch the devlog">Geliştirme günlüğünü izle</a>
+  </div>
+</header>
+
+<main>
+<section class="game ada" aria-labelledby="ada">
+  <div class="wrap">
+    <div class="intro">
+      <h2 id="ada">Issız Ada</h2>
+        <p class="why" data-tr="Sevdiğim biriyle, iki ayrı bilgisayardan birlikte oynayabileceğimiz bir oyun istedim." data-en="I wanted a game I could play together with someone I love, from two separate computers.">Sevdiğim biriyle, iki ayrı bilgisayardan birlikte oynayabileceğimiz bir oyun istedim.</p>
+      <div>
+        <p data-tr="İki kişilik, sakin bir hayatta kalma oyunu. Uçak adaya düşer; enkazı toplar, barınak kurar, ateş yakarsınız. Sabahtan geceye her saat kendi ışığıyla akar." data-en="A calm survival game for two. The plane goes down on an island; you salvage the wreck, build a shelter, light a fire. From morning to night, every hour has its own light.">İki kişilik, sakin bir hayatta kalma oyunu. Uçak adaya düşer; enkazı toplar, barınak kurar, ateş yakarsınız. Sabahtan geceye her saat kendi ışığıyla akar.</p>
+        <p class="status" data-tr="Çok erken aşamada. Godot ile geliştiriliyor." data-en="Very early in development. Built with Godot.">Çok erken aşamada. Godot ile geliştiriliyor.</p>
+        <a href="https://youtu.be/xK2sQzdwODM" data-tr="Geliştirme günlüğü 1'i izle" data-en="Watch devlog 1">Geliştirme günlüğü 1'i izle</a>
+      </div>
+    </div>
+
+    <div class="shots">
+      <figure>
+        <img src="assets/img/ada.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Gündüz, palmiyeli kumsal ve turkuaz deniz" data-alt-tr="Gündüz, palmiyeli kumsal ve turkuaz deniz" data-alt-en="Daytime: a palm-lined beach and turquoise sea">
+        <figcaption data-tr="Uçağımız bu adaya düştü." data-en="Our plane crashed on this island.">Uçağımız bu adaya düştü.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/enkaz.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Kumsalda uçak enkazı, ufukta ikinci bir ada" data-alt-tr="Kumsalda uçak enkazı, ufukta ikinci bir ada" data-alt-en="Plane wreckage on the beach, a second island on the horizon">
+        <figcaption data-tr="Dalgalar, enkazdan kalanları kıyıya taşıyor." data-en="The waves carry what's left of the wreckage to the shore.">Dalgalar, enkazdan kalanları kıyıya taşıyor.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/kamp.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Kumsalda yapraklardan yapılmış barınak" data-alt-tr="Kumsalda yapraklardan yapılmış barınak" data-alt-en="A shelter made of leaves on the beach">
+        <figcaption data-tr="Dallar ve yapraklarla, ilk barınak." data-en="The first shelter, from branches and leaves.">Dallar ve yapraklarla, ilk barınak.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/selale.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Adanın içinde, kayalıklardan dökülen şelale" data-alt-tr="Adanın içinde, kayalıklardan dökülen şelale" data-alt-en="A waterfall over the rocks, deep in the island">
+        <figcaption data-tr="Adanın içlerine yürüdükçe, saklı yerler çıkıyor." data-en="Walk deeper into the island and you'll discover hidden places.">Adanın içlerine yürüdükçe, saklı yerler çıkıyor.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/ates.webp" width="1280" height="720" loading="lazy" decoding="async" alt="Gün batımında palmiyelerin arasında yanan ateş" data-alt-tr="Gün batımında palmiyelerin arasında yanan ateş" data-alt-en="A fire burning between the palms at sunset">
+        <figcaption data-tr="Gece çökünce, küçük bir ateş." data-en="A small fire when night falls.">Gece çökünce, küçük bir ateş.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="lapse" id="lapse">
+    <div class="lapse-pin">
+      <video id="lapseVid" poster="assets/img/poster-zaman.webp" muted playsinline preload="auto" aria-hidden="true" tabindex="-1"><source src="assets/video/zaman.mp4" type="video/mp4"><source src="assets/video/zaman.webm" type="video/webm"></video>
+      <div class="cap"><div class="wrap"><p data-tr="Sabahtan geceye, her saat kendi ışığıyla akıyor." data-en="From morning to night, every hour flows in its own light.">Sabahtan geceye, her saat kendi ışığıyla akıyor.</p></div></div>
+    </div>
+  </div>
+
+  <div class="glow">
+    <video class="inview" data-src="assets/video/bocek" poster="assets/img/poster-bocek.webp" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <div class="cap"><div class="wrap"><p data-tr="Geceleri şelaleyi ateş böcekleri sarıyor." data-en="At night, fireflies surround the waterfall.">Geceleri şelaleyi ateş böcekleri sarıyor.</p></div></div>
+  </div>
+</section>
+
+<section class="game fen" aria-labelledby="fen">
+  <canvas id="souls" aria-hidden="true"></canvas>
+  <div class="wrap intro">
+    <div><h2 id="fen">Threnos ve Fenrir</h2><p class="alias" data-tr="Çalışma adı" data-en="Working title">Çalışma adı</p></div>
+    <p class="lead" data-tr="Threnos bir ağıt büyüsü: açtığı alanda ölen düşmanların ruhu yükselir, büyücüyü ve Fenrir'i iyileştirir." data-en="Threnos is a lament spell: inside its field, the souls of slain enemies rise and heal both the mage and Fenrir.">Threnos bir ağıt büyüsü: açtığı alanda ölen düşmanların ruhu yükselir, büyücüyü ve Fenrir'i iyileştirir.</p>
+    <div class="cols">
+      <p data-tr="Karanlık, zindan ağırlıklı bir aksiyon-RPG. Zırhlı bir savaş büyücüsü ve yoldaşı kurt Fenrir. Büyü, zırhlı eldivenlerinden çıkar." data-en="A dark, dungeon-heavy action RPG. An armored war mage and her wolf companion, Fenrir. Her magic comes from her armored gauntlets.">Karanlık, zindan ağırlıklı bir aksiyon-RPG. Zırhlı bir savaş büyücüsü ve yoldaşı kurt Fenrir. Büyü, zırhlı eldivenlerinden çıkar.</p>
+      <div>
+        <p class="status" data-tr="Prototip aşamasında. Unreal Engine 5 ile deneniyor, motor kararı kesin değil. Hedef PC. Henüz gösterecek görüntü yok." data-en="In prototyping. Being tested in Unreal Engine 5; the engine choice is not final. Aimed at PC. Nothing to show on screen yet.">Prototip aşamasında. Unreal Engine 5 ile deneniyor, motor kararı kesin değil. Hedef PC. Henüz gösterecek görüntü yok.</p>
+        <a href="https://www.youtube.com/@threnosgames" data-tr="Gelişimini YouTube'da izle" data-en="Follow its progress on YouTube">Gelişimini YouTube'da izle</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="follow" aria-labelledby="takip">
+  <div class="wrap">
+    <h2 id="takip" data-tr="Takip et" data-en="Follow">Takip et</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/@threnosgames">YouTube</a><span data-tr="Geliştirme günlükleri ve kısa videolar" data-en="Devlogs and short videos">Geliştirme günlükleri ve kısa videolar</span></li>
+      <li><a href="https://www.instagram.com/threnosgames/">Instagram</a><span data-tr="Kısa videolar" data-en="Short videos">Kısa videolar</span></li>
+      <li><a href="https://www.tiktok.com/@threnosgames">TikTok</a><span data-tr="Kısa videolar" data-en="Short videos">Kısa videolar</span></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><img src="assets/favicon.png" alt="" width="28" height="28"><span>© 2026 Threnos Games</span></div>
+</footer>
+
+<script>
+/* dil: tarayıcı diline göre başlar, düğmeyle değişir */
+(function(){
+  var btn=document.getElementById('lang');
+  var nodes=document.querySelectorAll('[data-tr]');
+  var alts=document.querySelectorAll('[data-alt-tr]');
+  var meta={
+    tr:{desc:"Threnos Games, tek kişilik bir oyun stüdyosu. Issız Ada ve yeni bir aksiyon-RPG üzerine çalışıyor. Geliştirme günlüğü YouTube'da.",btn:'English',bl:'en'},
+    en:{desc:"Threnos Games is a one-person game studio. Working on Issız Ada and a new action RPG. The devlog is on YouTube.",btn:'Türkçe',bl:'tr'}
+  };
+  function apply(l,save){
+    document.documentElement.lang=l;
+    nodes.forEach(function(n){n.textContent=n.getAttribute('data-'+l);});
+    alts.forEach(function(n){n.alt=n.getAttribute('data-alt-'+l);});
+    btn.textContent=meta[l].btn;btn.lang=meta[l].bl;
+    document.querySelector('meta[name="description"]').setAttribute('content',meta[l].desc);
+    if(save){try{localStorage.setItem('lang',l);}catch(e){}}
+  }
+  var l='';
+  try{l=localStorage.getItem('lang')||'';}catch(e){}
+  if(l!=='tr'&&l!=='en'){l=(navigator.language||'tr').toLowerCase().indexOf('tr')===0?'tr':'en';}
+  if(l!=='tr')apply(l,false);
+  btn.addEventListener('click',function(){apply(document.documentElement.lang==='tr'?'en':'tr',true);});
+})();
+</script>
+<script>
+/* hareket: gerçek oyun çekimleri + Threnos büyüsünün yükselen ruhları */
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io=('IntersectionObserver' in window);
+  var ext=document.createElement('video').canPlayType('video/webm; codecs="vp9"')?'.webm':'.mp4';
+  function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+
+  /* açılış: kuş sürüsü */
+  var hv=document.getElementById('heroVid');
+  if(hv&&!reduce){
+    hv.addEventListener('playing',function(){hv.classList.add('on');},{once:true});
+    hv.src=hv.getAttribute('data-src')+ext;tryPlay(hv);
+  }
+
+  /* görünürken oynayan döngüler (ateş böcekleri) */
+  if(!reduce&&io){
+    var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+      var v=e.target;
+      if(e.isIntersecting){if(!v.src)v.src=v.getAttribute('data-src')+ext;tryPlay(v);}else{v.pause();}
+    });},{rootMargin:'200px 0px'});
+    document.querySelectorAll('video.inview').forEach(function(v){obs.observe(v);});
+  }
+
+  /* kaydırdıkça gündüzden geceye */
+  var wrap=document.getElementById('lapse'),lv=document.getElementById('lapseVid');
+  if(wrap&&lv&&!reduce){
+    var target=0,cur=0,raf=0,primed=false;
+    function prime(){if(primed)return;primed=true;var p=lv.play();if(p&&p.then)p.then(function(){lv.pause();}).catch(function(){});}
+    window.addEventListener('touchstart',prime,{once:true,passive:true});
+    function measure(){
+      var r=wrap.getBoundingClientRect(),span=r.height-window.innerHeight;
+      var p=span>0?Math.min(1,Math.max(0,-r.top/span)):0;
+      target=p*Math.max(0,(lv.duration||0)-0.08);
+      if(!raf)raf=requestAnimationFrame(tick);
+    }
+    function tick(){
+      raf=0;cur+=(target-cur)*0.2;
+      if(Math.abs(target-cur)<0.004)cur=target;
+      if(lv.readyState>=1&&Math.abs(lv.currentTime-cur)>0.02){try{lv.currentTime=cur;}catch(e){}}
+      if(cur!==target)raf=requestAnimationFrame(tick);
+    }
+    window.addEventListener('scroll',measure,{passive:true});
+    window.addEventListener('resize',measure);
+    lv.addEventListener('loadedmetadata',measure);
+    measure();
+  }
+
+  /* Threnos: alanda yükselen ruhlar */
+  var c=document.getElementById('souls');
+  if(c&&c.getContext){
+    var x=c.getContext('2d'),w=0,h=0,P=[],run=false,rid=0;
+    function size(){var d=Math.min(window.devicePixelRatio||1,2),r=c.getBoundingClientRect();w=r.width;h=r.height;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);}
+    function mk(first){return{x:Math.random()*w,y:first?Math.random()*h:h+12,r:.8+Math.random()*2.2,v:.18+Math.random()*.5,s:Math.random()*6.283,a:.2+Math.random()*.5};}
+    function init(){size();var n=Math.round(Math.min(90,w/14));P=[];for(var i=0;i<n;i++)P.push(mk(true));}
+    function draw(t){
+      x.clearRect(0,0,w,h);
+      for(var i=0;i<P.length;i++){var p=P[i];
+        if(!reduce){p.y-=p.v;p.x+=Math.sin(t/1600+p.s)*.25;if(p.y<-12)P[i]=p=mk(false);}
+        var f=Math.max(0,Math.min(1,p.y/h));
+        x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);
+        x.fillStyle='rgba(176,200,235,'+(p.a*(.15+.85*f)).toFixed(3)+')';x.fill();
+        x.beginPath();x.arc(p.x,p.y,p.r*3.2,0,6.283);
+        x.fillStyle='rgba(176,200,235,'+(p.a*f*.08).toFixed(3)+')';x.fill();
+      }
+      if(run&&!reduce)rid=requestAnimationFrame(draw);
+    }
+    init();draw(0);
+    if(!reduce&&io){
+      new IntersectionObserver(function(es){run=es[0].isIntersecting;cancelAnimationFrame(rid);if(run)rid=requestAnimationFrame(draw);}).observe(c);
+    }
+    var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){init();if(!run)draw(0);},160);});
+  }
+})();
+</script>
+</body>
+</html>
