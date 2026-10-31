@@ -1,0 +1,31 @@
+# GitHub Pages source — do not accidentally publish local/private data.
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.bak
+*.backup
+*.tmp
+.DS_Store
+Thumbs.db
+**/id_rsa*
+**/id_ed25519*
+**/.npmrc
+**/.netrc
+**/.mcp.json
+**/.claude/
+**/.cursor/
+**/secrets/
+**/private/
+**/backups/
+# Historical temporary media was staged in the repository root.
+/media/

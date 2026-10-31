@@ -1,0 +1,326 @@
+{
+ "surum": "f5d50c80bb",
+ "siteUrl": "https://threnosgames.github.io/mumtaz-deniz",
+ "dosyalar": [
+  {
+   "dosya": ".nojekyll",
+   "bayt": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "dosya": "404.html",
+   "bayt": 887,
+   "sha256": "9068387b6228d60f7c475dd311188451e0917aa7e80ceaece3b2e2385ab38aa9"
+  },
+  {
+   "dosya": "assets/apple-touch-icon.png",
+   "bayt": 3190,
+   "sha256": "8e6b2f6ca684ae8f5880f322d03aa8b2d61b22227f4fdb4b97a23b708c977505"
+  },
+  {
+   "dosya": "assets/dil.js",
+   "bayt": 1146,
+   "sha256": "bc2e252b9638ba0f33cc12935708f0819843508e54eaff0eed7c15a33438f54b"
+  },
+  {
+   "dosya": "assets/fonts/anybody.woff2",
+   "bayt": 50200,
+   "sha256": "f0cc20e11cd13064721f5ebf399e73bb00b87c9f6e82bebd533571352fdff211"
+  },
+  {
+   "dosya": "assets/fonts/archivo.woff2",
+   "bayt": 58796,
+   "sha256": "e687ba05466953b7073e6db993346d358617dba59e28d748be927a4785a32ec4"
+  },
+  {
+   "dosya": "assets/fonts/newsreader-italic.woff2",
+   "bayt": 26276,
+   "sha256": "0fdcb2bfe372b7647fba52e16691647c3b049ccbdad920127181a7143fc0808c"
+  },
+  {
+   "dosya": "assets/fonts/newsreader.woff2",
+   "bayt": 55992,
+   "sha256": "6abcf3a4a395840696b26a54389497177233a707369c1e46b33c9f068dde3932"
+  },
+  {
+   "dosya": "assets/og-en.jpg",
+   "bayt": 60379,
+   "sha256": "730b6a8a51310e36793ad6d37f3ce3124c645a7191c4fbc9a7f04287485c12f5"
+  },
+  {
+   "dosya": "assets/og-tr.jpg",
+   "bayt": 60352,
+   "sha256": "faa4bd52d348f1be60bf89bf651b74fedf0e346b44df8ffd7ca97ac379f19305"
+  },
+  {
+   "dosya": "assets/site.css",
+   "bayt": 47931,
+   "sha256": "c2d2b8954aeeec07f1fcdd2b2ef5a361cead730129fb0d613778cb47964b4016"
+  },
+  {
+   "dosya": "assets/site.js",
+   "bayt": 15045,
+   "sha256": "4036a5265dac09152fcd47d0d7fe6abacf5ecae079ff2203c26594fc24d634fc"
+  },
+  {
+   "dosya": "en/index.html",
+   "bayt": 66820,
+   "sha256": "d3cf5b9881d8207b615ba36e56f8bad01928dd4499baf5d91e42d9f6e4180a24"
+  },
+  {
+   "dosya": "favicon.svg",
+   "bayt": 442,
+   "sha256": "49dd167d24dcce908505309ed7701b6d4d08c936e9ebe877788276a3b94e3df9"
+  },
+  {
+   "dosya": "index.html",
+   "bayt": 67590,
+   "sha256": "73912785a6ecb3db35f00d6a3b8359a96f4b722820d99b2156d298189d9ffd40"
+  },
+  {
+   "dosya": "media/bloomslide/1-oyun-420.webp",
+   "bayt": 27868,
+   "sha256": "4379f8ae5d6ebf890ee09e63dc14596261e1145f832d13ff120b683da5c1c903"
+  },
+  {
+   "dosya": "media/bloomslide/1-oyun-824.webp",
+   "bayt": 61708,
+   "sha256": "4ddbe5103d23c2407bee6309cd5502006d61ed4c740643fb307ade634e3b24de"
+  },
+  {
+   "dosya": "media/bloomslide/2-bahce-420.webp",
+   "bayt": 58570,
+   "sha256": "fad7c43f58f73e25bbbb6e83c1c30cb0f439ec2e33f4ee7f255a718170ea0d3e"
+  },
+  {
+   "dosya": "media/bloomslide/2-bahce-824.webp",
+   "bayt": 132940,
+   "sha256": "7ab840d7e88567a35158a155154f1ff4dce05b34edb8ffcf161605dbe973fd75"
+  },
+  {
+   "dosya": "media/bloomslide/3-harita-420.webp",
+   "bayt": 28498,
+   "sha256": "033c2edd078a21230466ccbb045f62a9fb1e5c4aeab224e6d90cb301fcc0e04f"
+  },
+  {
+   "dosya": "media/bloomslide/3-harita-824.webp",
+   "bayt": 59494,
+   "sha256": "6f38c75cc6af62f6cfb3c5b5d7874f1e05725c1a8cde70dc8d57ff5e1b1feacc"
+  },
+  {
+   "dosya": "media/foto/mumtaz-480.webp",
+   "bayt": 26380,
+   "sha256": "08eb2f039259a63f9f596ed89d221b6f5cab348f8f577c8d513e77dae6d2c232"
+  },
+  {
+   "dosya": "media/foto/mumtaz-960.webp",
+   "bayt": 157166,
+   "sha256": "0fd79b8001312fd03a1d2a0567052f543620483c23f30d252b4a14f25e2d72d1"
+  },
+  {
+   "dosya": "media/foto/muzik-bas-360.webp",
+   "bayt": 44806,
+   "sha256": "75aaaba96f5d38a79ad6702150bdb080280c0f6ee8500a9b45b64393a9890849"
+  },
+  {
+   "dosya": "media/foto/muzik-bas-540.webp",
+   "bayt": 130604,
+   "sha256": "2bed3928f29810a72869dda28a6711825a0a942c297c34640cb52bbff59337d0"
+  },
+  {
+   "dosya": "media/foto/portre-sahne-1080.webp",
+   "bayt": 302494,
+   "sha256": "ccecf481a3266f92b213c7d311d55aa894fc8ef0842b78d0e8b61a0fe9f22cdd"
+  },
+  {
+   "dosya": "media/foto/portre-sahne-540.webp",
+   "bayt": 74178,
+   "sha256": "266ae24703f170410bac5c07a5dc428ee160861b046089e0e023dcd3e824f173"
+  },
+  {
+   "dosya": "media/foto/portre-sahne-810.webp",
+   "bayt": 164630,
+   "sha256": "b5fc59747832ec9adec7e269c4dc4662f93cde3dabee0aac0042571a0380e687"
+  },
+  {
+   "dosya": "media/instagram/atmaca-420.webp",
+   "bayt": 36514,
+   "sha256": "636db2a5b20f280ac1a592cbdaef188bc79e928c260bf3780ad718789120aaf4"
+  },
+  {
+   "dosya": "media/instagram/atmaca-540.webp",
+   "bayt": 55382,
+   "sha256": "9b5e4fccd3ab1ecdf796f1a9030a2e8c616c78f9b5d930cba1620b0f46829cd4"
+  },
+  {
+   "dosya": "media/issiz-ada/ada-1280.webp",
+   "bayt": 45968,
+   "sha256": "a8b1007d5363f071ad20f7f50716fd11de8163c9636e417ef37584bb0477ae64"
+  },
+  {
+   "dosya": "media/issiz-ada/ada-640.webp",
+   "bayt": 18796,
+   "sha256": "9f3fed08f81d0c80a35630d560cc21d02088e8931088acc7224dccd14c3e5c8c"
+  },
+  {
+   "dosya": "media/issiz-ada/ates-1280.webp",
+   "bayt": 88014,
+   "sha256": "7c80cfff755abbfc12ae250ff1194ce9ff8af3aba570f261d2001e132b1168a1"
+  },
+  {
+   "dosya": "media/issiz-ada/ates-640.webp",
+   "bayt": 37244,
+   "sha256": "1fc1cdb8a511ef963b2c6af2f5341da1c1666339bdab7498f6071a1a1d507ee2"
+  },
+  {
+   "dosya": "media/issiz-ada/enkaz-1280.webp",
+   "bayt": 60802,
+   "sha256": "023336b8a1c0a58edffa2112c0885c49bec609c944846da349a697e1eff86660"
+  },
+  {
+   "dosya": "media/issiz-ada/enkaz-640.webp",
+   "bayt": 25392,
+   "sha256": "c3c055d03476fa79728163d3487959beb62950469a32b352125851b24de11115"
+  },
+  {
+   "dosya": "media/issiz-ada/kamp-1280.webp",
+   "bayt": 39486,
+   "sha256": "9ca8af420783ed2404b4ca7f6208575b4d78c04b648d66e7dbe47cda30a1712a"
+  },
+  {
+   "dosya": "media/issiz-ada/kamp-640.webp",
+   "bayt": 15970,
+   "sha256": "a6b03724bb3fa35ed343fc89862b24a1cb6c4e8149b447edde85e95fbf7352c1"
+  },
+  {
+   "dosya": "media/issiz-ada/oynanis.mp4",
+   "bayt": 9479072,
+   "sha256": "f12e40505a68103cc8bb30c940e139172e8b27f1f25b9c6c04d8af53abff4cb7"
+  },
+  {
+   "dosya": "media/issiz-ada/poster-oynanis-1280.webp",
+   "bayt": 25670,
+   "sha256": "1be7b8a18f3e23c954599f17f47a479bad607a9d39829ffa1913d1d34f6b4308"
+  },
+  {
+   "dosya": "media/issiz-ada/poster-oynanis-640.webp",
+   "bayt": 10500,
+   "sha256": "0592ac845dea56f33267faaba68a52295e2454f46af8f5bf9cb177ac39b8987f"
+  },
+  {
+   "dosya": "media/issiz-ada/poster-zaman-1280.webp",
+   "bayt": 64512,
+   "sha256": "b64fabc8ef00df8f602bfae64f3f094045675e3f8afec65f7437281cbb5da169"
+  },
+  {
+   "dosya": "media/issiz-ada/poster-zaman-640.webp",
+   "bayt": 24866,
+   "sha256": "275a99fd559fdee51e86de9e760b7f3e8d7e1d9acb6d7a16d17ce47cd40732a4"
+  },
+  {
+   "dosya": "media/issiz-ada/selale-1280.webp",
+   "bayt": 73796,
+   "sha256": "e231e86856831c305b80525f4d70e84c1c6e15cc06a53a366e1745e7bece388d"
+  },
+  {
+   "dosya": "media/issiz-ada/selale-640.webp",
+   "bayt": 29326,
+   "sha256": "1c66fee73819d923802e5b06f1c427aae7a1d6f0ade18be164f9fc395f2435ef"
+  },
+  {
+   "dosya": "media/issiz-ada/zaman.mp4",
+   "bayt": 1131546,
+   "sha256": "c59ba2c0adbcba20082d64ff3593076fa0720a74ed729c84fba763fb775cd287"
+  },
+  {
+   "dosya": "media/lab/neon-rezonans-1280.webp",
+   "bayt": 38562,
+   "sha256": "aff0f721345d2fbb123e1f2d28d1209b68643ef718d7b2e434958c6ec30e8785"
+  },
+  {
+   "dosya": "media/lab/neon-rezonans-640.webp",
+   "bayt": 14736,
+   "sha256": "af01002a99c3bbf203964da1d45803cca43e2206d76483ffb9a1ee173c3de5b4"
+  },
+  {
+   "dosya": "media/lab/sagu-1280.webp",
+   "bayt": 17552,
+   "sha256": "cae5e16500e4d47a0a838547c8139dcb8f34a1c6d00ef09a59f796a0f1c75336"
+  },
+  {
+   "dosya": "media/lab/sagu-640.webp",
+   "bayt": 7182,
+   "sha256": "4af1884e1e57a207dc783ccd988f3fd5abc42226f88f983f941992fcf0b7c8de"
+  },
+  {
+   "dosya": "media/lab/son-efe-1280.webp",
+   "bayt": 56994,
+   "sha256": "a806833cc4d16ce2d5b730b342c3b6bea6dc0149023393374991fd288c53050c"
+  },
+  {
+   "dosya": "media/lab/son-efe-640.webp",
+   "bayt": 20966,
+   "sha256": "181ea435de8986808cc73f3fecb3faa1cc430b652d960d2f126003cd7f4e6b5b"
+  },
+  {
+   "dosya": "media/studyo/uzay-1600.webp",
+   "bayt": 52236,
+   "sha256": "9984b48256d6d1a8ba1e6a5afd7f67e52ea93d4bd086b58aea83c5bda28460b9"
+  },
+  {
+   "dosya": "media/studyo/uzay-800.webp",
+   "bayt": 18964,
+   "sha256": "9ce448ad5a00d696269c5d77bacd9a3e3b261c526b1f399920cde468c47e8a99"
+  },
+  {
+   "dosya": "media/studyo/uzay-kart-1280.webp",
+   "bayt": 21870,
+   "sha256": "83db6dc2aa1523963318c6d9b10b9b61e65eef62299cb16b2ddf5785bccbd274"
+  },
+  {
+   "dosya": "media/studyo/uzay-kart-640.webp",
+   "bayt": 10016,
+   "sha256": "1484a2141988f70e72fa6873284726ad4ca2f6e616e2ea807d431a1cfb5377bf"
+  },
+  {
+   "dosya": "media/youtube/73s5qwefVaI-406.webp",
+   "bayt": 27646,
+   "sha256": "230b2605a4e99308e3b463d119d75aead23e2bca08f7dd8edb33aabb4b5bc549"
+  },
+  {
+   "dosya": "media/youtube/Y0vlp73KnmI-406.webp",
+   "bayt": 56796,
+   "sha256": "76402326795a48e6efd83b1271d1ae7ffe432d3236355490f95d12465f728adf"
+  },
+  {
+   "dosya": "media/youtube/tVJEzcluD3I-420.webp",
+   "bayt": 35700,
+   "sha256": "62b988bebd257fc922f2226373a1faec7a1c2f9f93b16a4ccb21741de5d0813c"
+  },
+  {
+   "dosya": "media/youtube/tVJEzcluD3I-840.webp",
+   "bayt": 88476,
+   "sha256": "8780c7ae8736de2d543d1f0e45e6d2febde32742077236d55eba415e920dc870"
+  },
+  {
+   "dosya": "media/youtube/xK2sQzdwODM-1280.webp",
+   "bayt": 81068,
+   "sha256": "4dfecc40c4252027f2ecc181aa610f4675a13879c52cb8bc74ec6b236061e55b"
+  },
+  {
+   "dosya": "media/youtube/xK2sQzdwODM-640.webp",
+   "bayt": 30782,
+   "sha256": "bf9ee14f4f523a922679c213b02906f289a6701fa0c0503a68b5ff33d6cd82c5"
+  },
+  {
+   "dosya": "robots.txt",
+   "bayt": 89,
+   "sha256": "7cefb50459749d72e36c3390e96fa2ed498b4a9ccbd137e126139a87cc9c5ec5"
+  },
+  {
+   "dosya": "sitemap.xml",
+   "bayt": 930,
+   "sha256": "c0c94915ae2a4e4004a7b4fe13d82d5231a3de4f793b6f09233c2f4012d38787"
+  }
+ ]
+}

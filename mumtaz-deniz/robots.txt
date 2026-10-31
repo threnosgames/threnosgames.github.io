@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://threnosgames.github.io/mumtaz-deniz/sitemap.xml

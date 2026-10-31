@@ -1,0 +1,22 @@
+name: Public-site privacy guard
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  privacy-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check public tracked files for secrets and private paths
+        run: node scripts/check-public-secrets.mjs
+      - name: Reject new Claude session identifiers in commit messages
+        shell: bash
+        run: |
+          if git log -1 --pretty=%B | grep -Eiq 'Claude-Session:|session_[[:alnum:]]{12,}'; then
+            echo "Private session identifier found in the latest commit message."
+            exit 1
+          fi
