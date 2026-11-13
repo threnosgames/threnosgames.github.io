@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-13",
+  "provenance": "operator_spoken_report",
+  "independent_raw_evidence_verified": false,
+  "platform": {
+    "gpu": "RTX 3060 12GB GA106",
+    "pci_id": "10de:2504",
+    "cpu": "Intel i5-12400F",
+    "board": "MSI H610M-E",
+    "unlocker": "nv-uefi-unlocker v2.1.11"
+  },
+  "measurements": [
+    {
+      "id": "fp16_fp32acc",
+      "kind": "target",
+      "baseline": 25.84,
+      "after": 43.16,
+      "unit": "TFLOPS"
+    },
+    {
+      "id": "bf16_fp32acc",
+      "kind": "target",
+      "baseline": 25.57,
+      "after": 47.36,
+      "unit": "TFLOPS"
+    },
+    {
+      "id": "fp16_fp16acc",
+      "kind": "control",
+      "baseline": 47.89,
+      "after": 47.49,
+      "unit": "TFLOPS"
+    }
+  ],
+  "other_unpaired_claims": {
+    "five_path": "three accelerated targets, two stable controls",
+    "tf32_speedup_approx": 2.04,
+    "bf16_other_run_approx": 1.93,
+    "unparsed_fp32": "x1.785, exact kernel path unknown"
+  },
+  "missing": [
+    "loader.log",
+    "ssdiag direct readback",
+    "official five-path native report",
+    "repeated stock-clock tests"
+  ]
+}
